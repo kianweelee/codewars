@@ -1353,10 +1353,10 @@ def sum_two_smallest_numbers(numbers):
 
 ```python
 def remove_smallest(numbers):
-    if numbers:
-        numbers.remove(min(numbers))
-    return numbers
-    raise NotImplementedError("TODO: remove_smallest")
+    if len(numbers) < 1: 
+        return numbers
+    i = numbers.index(min(numbers))
+    return numbers[0:i] + numbers[i+1:]
 ```
 
 > **The museum of incredible dull things**
